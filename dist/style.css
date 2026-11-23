@@ -1,0 +1,420 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700;800&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  background: linear-gradient(
+    135deg,
+    #f8f5e9,
+    #e9efdf,
+    #f5ead8
+  );
+  color: #354b38;
+}
+
+/* CONTAINER */
+
+.menu-container {
+  max-width: 1100px;
+  margin: auto;
+  padding: 30px;
+}
+
+/* HEADER */
+
+.header {
+  text-align: center;
+  padding: 45px 20px;
+  background: linear-gradient(
+    135deg,
+    #dce8d2,
+    #f4ead5,
+    #e8d8bb
+  );
+  border: 1px solid rgba(255,255,255,0.7);
+  border-radius: 28px;
+  margin-bottom: 30px;
+  box-shadow: 0 10px 30px rgba(53,75,56,0.08);
+}
+
+.brand-logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+}
+
+.logo-img {
+  width: 75px;
+  height: 75px;
+  object-fit: contain;
+}
+
+.brand-text h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 43px;
+  font-weight: 800;
+  color: #315b3b;
+  letter-spacing: 1px;
+  text-shadow: 2px 3px 5px rgba(49,91,59,0.12);
+}
+
+.brand-text span {
+  display: block;
+  font-size: 10px;
+  letter-spacing: 5px;
+  color: #a47743;
+  font-weight: 700;
+  margin-top: 5px;
+}
+
+.tagline {
+  color: #65785c;
+  margin-top: 18px;
+  font-size: 14px;
+  letter-spacing: 0.5px;
+}
+
+/* VIDEO */
+
+.banner-video-wrapper {
+  background: linear-gradient(135deg,#dce8d2,#f5e6cb);
+  padding: 12px;
+  border-radius: 25px;
+  margin-bottom: 30px;
+  box-shadow: 0 8px 25px rgba(53,75,56,0.12);
+}
+
+.video-container {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  border-radius: 19px;
+}
+
+.video-container iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+/* KATEGORI */
+
+.category-filter {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  flex-wrap: wrap;
+  margin-bottom: 45px;
+}
+
+.filter-btn {
+  border: 1px solid #d5dfcc;
+  background: rgba(255,255,255,0.75);
+  color: #456047;
+  padding: 13px 25px;
+  border-radius: 30px;
+  font-size: 13px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.filter-btn:hover,
+.filter-btn.active {
+  background: #315b3b;
+  color: white;
+  border-color: #315b3b;
+  transform: translateY(-3px);
+  box-shadow: 0 6px 15px rgba(49,91,59,0.2);
+}
+
+/* SECTION */
+
+.menu-section {
+  margin-bottom: 50px;
+}
+
+.section-title {
+  color: #315b3b;
+  font-family: 'Playfair Display', serif;
+  font-size: 29px;
+  margin-bottom: 25px;
+  border-left: 5px solid #d9a45d;
+  padding-left: 15px;
+}
+
+/* GRID */
+
+.menu-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+  gap: 28px;
+}
+
+/* CARD */
+
+.menu-card {
+  background: #fffdf7;
+  border-radius: 22px;
+  overflow: hidden;
+  border: 1px solid #eee8d9;
+  box-shadow: 0 7px 22px rgba(53,75,56,0.09);
+  transition: all 0.35s ease;
+}
+
+.menu-card:hover {
+  transform: translateY(-9px);
+  box-shadow: 0 15px 32px rgba(53,75,56,0.17);
+}
+
+/* GAMBAR */
+.card-img-wrapper {
+  position: relative;
+  height: 220px;
+  overflow: hidden;
+}
+
+.card-img-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+  transition: transform 0.3s ease;
+}
+
+/* Zoom tipis saat kursor diarahkan */
+.menu-card:hover .card-img-wrapper img {
+  transform: scale(1.03);
+}
+
+/* BADGE */
+
+.badge-tag {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  background: #d9a45d;
+  color: white;
+  padding: 8px 15px;
+  border-radius: 20px;
+  font-size: 11px;
+  font-weight: 800;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.12);
+}
+
+.badge-tag.red {
+  background: #c96e55;
+}
+
+.badge-tag.green {
+  background: #638b61;
+}
+
+/* ISI CARD */
+
+.card-body {
+  padding: 22px;
+}
+
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 14px;
+}
+
+.card-header h3 {
+  color: #35583b;
+  font-family: 'Playfair Display', serif;
+  font-size: 19px;
+}
+
+.price {
+  color: #bd7840;
+  font-weight: 800;
+  font-size: 14px;
+  white-space: nowrap;
+}
+
+.description {
+  color: #777d70;
+  font-size: 13px;
+  line-height: 1.8;
+  margin-bottom: 18px;
+}
+
+/* FOOTER CARD */
+
+.card-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 15px;
+}
+
+.rating {
+  color: #d99b37;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.btn-order {
+  text-decoration: none;
+  background: linear-gradient(135deg,#537c50,#315b3b);
+  color: white;
+  padding: 10px 23px;
+  border-radius: 25px;
+  font-size: 13px;
+  font-weight: 800;
+  transition: all 0.3s ease;
+}
+
+.btn-order:hover {
+  background: #d9a45d;
+  color: white;
+  transform: scale(1.07);
+}
+
+/* FOOTER */
+
+.footer {
+  text-align: center;
+  background: linear-gradient(135deg,#315b3b,#243f2b);
+  color: white;
+  padding: 30px 15px;
+  border-radius: 22px;
+  margin-top: 45px;
+  line-height: 2.2;
+  box-shadow: 0 8px 22px rgba(49,91,59,0.18);
+}
+
+.footer small {
+  color: #dce8d2;
+  font-size: 11px;
+}
+
+/* RESPONSIVE HP */
+
+@media (max-width: 600px) {
+  .menu-container {
+    padding: 15px;
+  }
+
+  .brand-text h1 {
+    font-size: 29px;
+  }
+
+  .logo-img {
+    width: 55px;
+    height: 55px;
+  }
+
+  .brand-text span {
+    font-size: 8px;
+    letter-spacing: 3px;
+  }
+
+  .tagline {
+    font-size: 12px;
+    line-height: 1.7;
+  }
+
+  .section-title {
+    font-size: 23px;
+  }
+
+  .menu-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .category-filter {
+    gap: 8px;
+  }
+
+  .filter-btn {
+    padding: 10px 15px;
+    font-size: 11px;
+  }
+}
+/* ANIMASI FILTER MENU */
+
+.menu-section {
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.menu-section.hide-menu {
+  display: none;
+}
+
+.menu-section.show-menu {
+  animation: menuFade 0.4s ease;
+}
+
+@keyframes menuFade {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+/* --- 6. Section Poster --- */
+
+.poster-menu {
+    max-width: 600px;
+    margin: 24px auto;
+    text-align: center;
+}
+
+.poster-menu figure {
+    margin: 0;
+}
+
+.poster-menu img {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+}
+
+.poster-menu figcaption {
+    margin-top: 10px;
+    font-size: 0.9rem;
+    color: #555;
+}
+
+/* HEADER LOGO SEKOLAH & JURUSAN */
+.header {
+  position: relative;
+}
+
+.logo-sekolah,
+.logo-jurusan {
+  position: absolute;
+  top: 20px;
+  width: 90px;
+  height: 90px;
+  object-fit: contain;
+  z-index: 5;
+}
+
+.logo-sekolah {
+  left: 25px;
+}
+
+.logo-jurusan {
+  right: 25px;
+}
